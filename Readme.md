@@ -46,7 +46,6 @@ Commencez par construire et tester l'application ViteJS localement.
    ```dockerfile
    # Utilise l'image de base Nginx
    FROM nginx:latest
-   ```
 
    # Copie les fichiers de l'application dans le répertoire Nginx
 
@@ -59,6 +58,7 @@ Commencez par construire et tester l'application ViteJS localement.
    # Expose le port 80 pour Nginx
 
    EXPOSE 80
+   ```
 
 ````
 
