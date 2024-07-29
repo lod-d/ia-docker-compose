@@ -44,38 +44,31 @@ Commencez par construire et tester l'application ViteJS localement.
    Créez un fichier `Dockerfile` à la racine de votre projet avec le contenu suivant :
 
    ```dockerfile
-   # Utilise une image de base node
-   FROM node:14
+   # Utilise l'image de base Nginx
+   FROM nginx:latest
+   ```
 
-   # Définit le répertoire de travail
-   WORKDIR /app
+   # Copie les fichiers de l'application dans le répertoire Nginx
 
-   # Copie le package.json et package-lock.json dans le répertoire de travail
-   COPY package*.json ./
+   COPY ./dist/ /usr/share/nginx/html
 
-   # Installe les dépendances
-   RUN npm install
+   # Copie le fichier de configuration Nginx personnalisé
 
-   # Copie le reste de l'application
-   COPY . .
+   COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-   # Construit l'application pour la production
-   RUN npm run build
+   # Expose le port 80 pour Nginx
 
-   # Expose le port de l'application
    EXPOSE 80
 
-   # Démarre l'application
-   CMD ["npm", "start"]
-   ```
+````
 
-   Pour construire l'image Docker :
+Pour construire l'image Docker :
 
-   ```bash
-   docker build -t my-vite-app .
-   ```
+```bash
+docker build -t my-vite-app .
+````
 
-   Remplacez `my-vite-app` par le nom souhaité pour votre image Docker.
+Remplacez `my-vite-app` par le nom souhaité pour votre image Docker.
 
 ### 2. Utiliser Docker Compose pour orchestrer les conteneurs
 
@@ -97,13 +90,10 @@ Docker Compose permet de définir et de gérer plusieurs conteneurs.
        image: ollama/ollama
        ports:
          - "11434:11434"
-       environment:
-         # Définissez les variables d'environnement si nécessaire
-         - API_KEY=your_api_key
    ```
 
    - **`web`** : Définit le service pour votre application ViteJS.
-   - **`ollama`** : Définit le service pour l'IA Ollama. Remplacez `your_api_key` par une clé API valide si nécessaire.
+   - **`ollama`** : Définit le service pour l'IA Ollama.
 
 2. **Lancer Docker Compose :**
 
