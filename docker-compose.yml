@@ -1,0 +1,11 @@
+services:
+  web:
+    image: chat:v0.1
+    build: .
+    ports:
+      - "80:80"
+
+  ollama:
+    image: ollama/ollama
+    ports:
+      - "11434:11434"
