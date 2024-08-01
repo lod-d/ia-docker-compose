@@ -69,7 +69,7 @@ Commencez par construire et tester l'application ViteJS localement.
    docker build -t my-vite-app .
    ```
 
-   Remplacez `my-vite-app` par le nom souhaité pour votre image Docker.
+   Remplacez `my-vite-app` par le nom souhaité pour votre image Docker. Ainsi vous avez créer l'image docker de votre application.
 
 ### 2. Utiliser Docker Compose pour orchestrer les conteneurs
 
@@ -81,11 +81,11 @@ Docker Compose permet de définir et de gérer plusieurs conteneurs.
 
    ```yaml
    services:
-     web:
-       image: my-vite-app
-       build: .
-       ports:
-         - "3000:3000"
+     web-app:
+     image: chat-app:v0.1
+     build: .
+     ports:
+       - "80:80"
 
      ollama:
        image: ollama/ollama
@@ -93,27 +93,26 @@ Docker Compose permet de définir et de gérer plusieurs conteneurs.
          - "11434:11434"
    ```
 
-   - **`web`** : Définit le service pour votre application ViteJS.
-   - **`ollama`** : Définit le service pour l'IA Ollama.
+- **`web`** : Définit le service pour votre application ViteJS.
+- **`ollama`** : Définit le service pour l'IA Ollama.
 
 2. **Lancer Docker Compose :**
 
-   Exécutez la commande suivante pour démarrer les services définis dans `docker-compose.yml` :
+Exécutez la commande suivante pour démarrer les services définis dans `docker-compose.yml` :
 
-   ```bash
-   docker-compose up
-   ```
+```bash
+docker-compose up
+```
 
-   Cette commande construit et lance les conteneurs définis dans le fichier compose.
+Cette commande construit et lance les conteneurs définis dans le fichier compose.
 
-3. ** Télécharger l'image docker et faire la commande dans le container afin de télécharger l'ia d'ollama :**
+3. **Télécharger l'image docker et faire la commande dans le container afin de télécharger l'ia d'ollama :**
 
    Exécutez les commandes suivante :
 
    ```bash
-   docker pull ollama/ollama
-
-   docker run --name
+   # rechercher le nom de votre container ollama, il utilise l'image ollama/ollama
+   docker ps
 
    docker exec -it nom_du_container ollama run qwen2:0.5b
    ```

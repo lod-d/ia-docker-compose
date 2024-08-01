@@ -1,10 +1,9 @@
 import "./style.css";
 
 // L'URL de l'API, assurez-vous que le serveur est démarré et écoute sur le port 11434
+// variable globale
 const apiUrl = "http://localhost:11434/api/chat";
-
 const responseDiv = document.getElementById("response");
-
 const start = document.getElementById("start");
 
 start.addEventListener("click", function (event) {
@@ -15,7 +14,6 @@ start.addEventListener("click", function (event) {
 
 // La requête fetch
 function fetchData() {
-  // Les données à envoyer avec la requête
   const requestData = {
     model: "qwen2:0.5b",
     messages: [
@@ -42,8 +40,6 @@ function fetchData() {
       return response.json(); // Traite la réponse en tant que JSON
     })
     .then((data) => {
-      // console.log("Response:", data); // Affiche les données de réponse
-      // console.log(data.message.content);
       const response = data.message.content;
       responseDiv.innerHTML = response;
     })

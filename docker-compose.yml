@@ -1,12 +1,11 @@
 services:
-  web:
-    image: chat:v0.1
+  tp-web-app:
+    image: chat-app:v0.1
     build: .
     ports:
       - "80:80"
 
   ollama:
     image: ollama/ollama
-    command: ollama run qwen2:0.5b
     ports:
       - "11434:11434"
