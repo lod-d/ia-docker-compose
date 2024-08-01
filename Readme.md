@@ -8,9 +8,11 @@ Cette application est construite avec ViteJS et JavaScript Vanilla. Elle utilise
 
 ## Objectif
 
-1. **Pull ollama/ollama sur la registry de docker et entrer en commande `ollama pull qwen2:0.5b` ou avec le Docker Desktop**
-2. **Créer une image Docker pour l'application ViteJS.**
-3. **Utiliser Docker Compose pour orchestrer deux conteneurs : l'application ViteJS et l'IA Ollama.**
+1. **Créer une image Docker pour l'application ViteJS.**
+2. **Utiliser Docker Compose pour orchestrer deux conteneurs : l'application ViteJS et l'IA Ollama.**
+3. **Pull ollama/ollama sur la registry de docker et entrer en commande `ollama run qwen2:0.5b` ou avec le Docker Desktop**
+
+- à l'aide de la commande docker exec -it nom_du_container ollama run qwen2:0.5b
 
 ## Étapes de développement
 
@@ -60,13 +62,12 @@ Commencez par construire et tester l'application ViteJS localement.
    EXPOSE 80
    ```
 
-````
+```bash
 
 Pour construire l'image Docker :
 
-```bash
 docker build -t my-vite-app .
-````
+```
 
 Remplacez `my-vite-app` par le nom souhaité pour votre image Docker.
 
