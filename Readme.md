@@ -119,6 +119,8 @@ Cette commande construit et lance les conteneurs définis dans le fichier compos
    # une fois l'installation fini apres "success" après les >>> fait une **/bye**
    ```
 
+Votre application est maintenant en cours d'exécution. Pour la visualiser, ouvrez votre navigateur web et entrez l'adresse suivante dans la barre d'adresse : localhost:80.
+
 ### Résumé
 
 Vous avez maintenant une application ViteJS s'exécutant dans un conteneur Docker, avec une interface de chat communiquant avec une IA Ollama, également exécutée dans un conteneur Docker. Utilisez Docker Compose pour gérer ces conteneurs, facilitant ainsi le déploiement et l'orchestration de votre application.
