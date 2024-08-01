@@ -106,6 +106,18 @@ Docker Compose permet de définir et de gérer plusieurs conteneurs.
 
    Cette commande construit et lance les conteneurs définis dans le fichier compose.
 
+3. ** Télécharger l'image docker et faire la commande dans le container afin de télécharger l'ia d'ollama :**
+
+   Exécutez les commandes suivante :
+
+   ```bash
+   docker pull ollama/ollama
+
+   docker run --name
+
+   docker exec -it nom_du_container ollama run qwen2:0.5b
+   ```
+
 ### Résumé
 
 Vous avez maintenant une application ViteJS s'exécutant dans un conteneur Docker, avec une interface de chat communiquant avec une IA Ollama, également exécutée dans un conteneur Docker. Utilisez Docker Compose pour gérer ces conteneurs, facilitant ainsi le déploiement et l'orchestration de votre application.

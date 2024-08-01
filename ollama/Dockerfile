@@ -2,7 +2,7 @@
 FROM ollama/ollama
 
 # Set the working directory
-WORKDIR /bin/ollama
+# WORKDIR /bin/ollama
 
 # Expose the necessary port
 EXPOSE 11434
@@ -11,4 +11,4 @@ EXPOSE 11434
 RUN ollama pull qwen2:0.5b
 
 # Set the command to start the service
-CMD ["ollama"]
+# CMD ["ollama"]
