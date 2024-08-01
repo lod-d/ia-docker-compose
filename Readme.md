@@ -62,14 +62,14 @@ Commencez par construire et tester l'application ViteJS localement.
    EXPOSE 80
    ```
 
-```bash
+   Pour construire l'image Docker :
 
-Pour construire l'image Docker :
+   ```bash
 
-docker build -t my-vite-app .
-```
+   docker build -t my-vite-app .
+   ```
 
-Remplacez `my-vite-app` par le nom souhaité pour votre image Docker.
+   Remplacez `my-vite-app` par le nom souhaité pour votre image Docker.
 
 ### 2. Utiliser Docker Compose pour orchestrer les conteneurs
 
