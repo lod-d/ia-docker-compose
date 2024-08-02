@@ -114,9 +114,9 @@ Cette commande construit et lance les conteneurs définis dans le fichier compos
    docker ps
 
    docker exec -it nom_du_container ollama run qwen2:0.5b
-
-   # une fois l'installation fini apres "success" après les >>> fait une **/bye**
    ```
+   une fois l'installation fini apres "success" après les >>> fait une **/bye**
+   
 
 Votre application est maintenant en cours d'exécution. Pour la visualiser, ouvrez votre navigateur web et entrez l'adresse suivante dans la barre d'adresse : localhost:80.
 
