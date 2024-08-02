@@ -102,7 +102,7 @@ Docker Compose permet de définir et de gérer plusieurs conteneurs.
 Exécutez la commande suivante pour démarrer les services définis dans `docker-compose.yml` :
 
 ```bash
-docker-compose up
+docker-compose up -d
 ```
 
 Cette commande construit et lance les conteneurs définis dans le fichier compose.
