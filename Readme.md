@@ -1,4 +1,3 @@
-Voici un README amélioré et clarifié pour guider les apprenants à créer une application ViteJS avec un Docker Compose intégrant deux conteneurs :
 
 ---
 
