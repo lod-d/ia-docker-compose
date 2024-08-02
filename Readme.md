@@ -79,17 +79,19 @@ Docker Compose permet de définir et de gérer plusieurs conteneurs.
    À la racine de votre projet, créez un fichier `docker-compose.yml` avec le contenu suivant :
 
    ```yaml
+   
    services:
-  web-app:
-    image: chat-app:v0.1
-    build: .
-    ports:
-      - "80:80"
+      web-app:
+         image: chat-app:v0.1
+         build: .
+         ports:
+            - "80:80"
 
-  ollama:
-    image: ollama/ollama
-    ports:
-      - "11434:11434"
+   ollama:
+         image: ollama/ollama
+         ports:
+            - "11434:11434"
+   
    ```
 
 - **`web`** : Définit le service pour votre application ViteJS.
