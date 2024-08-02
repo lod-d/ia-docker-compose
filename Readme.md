@@ -80,16 +80,16 @@ Docker Compose permet de définir et de gérer plusieurs conteneurs.
 
    ```yaml
    services:
-     web-app:
-     image: chat-app:v0.1
-     build: .
-     ports:
-       - "80:80"
+      web-app:
+         image: chat-app:v0.1
+         build: .
+         ports:
+            - "80:80"
 
      ollama:
-       image: ollama/ollama
-       ports:
-         - "11434:11434"
+         image: ollama/ollama
+         ports:
+            - "11434:11434"
    ```
 
 - **`web`** : Définit le service pour votre application ViteJS.
