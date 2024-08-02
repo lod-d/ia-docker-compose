@@ -125,3 +125,7 @@ Votre application est maintenant en cours d'exécution. Pour la visualiser, ouvr
 ### Résumé
 
 Vous avez maintenant une application ViteJS s'exécutant dans un conteneur Docker, avec une interface de chat communiquant avec une IA Ollama, également exécutée dans un conteneur Docker. Utilisez Docker Compose pour gérer ces conteneurs, facilitant ainsi le déploiement et l'orchestration de votre application.
+
+````
+
+
