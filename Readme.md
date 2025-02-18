@@ -85,7 +85,7 @@ Docker Compose permet de définir et de gérer plusieurs conteneurs.
        image: chat-app:v0.1
        build: .
        ports:
-         - "80:80"
+         - "8066:80"
    
      ollama:
        image: ollama/ollama
